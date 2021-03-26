@@ -317,7 +317,7 @@ PyTypeObject PyBfloat16_Type = {
     sizeof(PyBfloat16),                        // tp_basicsize
     0,                                         // tp_itemsize
     nullptr,                                   // tp_dealloc
-    nullptr,                                   // tp_print
+    0,                                         // tp_vectorcall_offset
     nullptr,                                   // tp_getattr
     nullptr,                                   // tp_setattr
     nullptr,                                   // tp_compare / tp_reserved
@@ -359,6 +359,7 @@ PyTypeObject PyBfloat16_Type = {
     nullptr,                                   // tp_weaklist
     nullptr,                                   // tp_del
     0,                                         // tp_version_tag
+    nullptr,                                   // tp_finalize
 };
 
 // Numpy support
